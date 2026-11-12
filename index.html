@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>안녕하세요</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f3ed;
+      color: #24251f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(ellipse at 18% 22%, rgba(232, 164, 113, .18), transparent 34%),
+        radial-gradient(ellipse at 82% 78%, rgba(133, 157, 130, .2), transparent 36%),
+        #f5f3ed;
+    }
+
+    main {
+      width: min(100%, 760px);
+      min-height: 440px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(36, 37, 31, .12);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .65);
+      box-shadow: 0 24px 80px rgba(52, 49, 39, .08);
+      text-align: center;
+    }
+
+    main::before, main::after {
+      content: "";
+      position: absolute;
+      width: 170px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(36, 37, 31, .12);
+      border-radius: 50%;
+    }
+
+    main::before { top: -102px; left: -74px; }
+    main::after { right: -80px; bottom: -108px; width: 220px; }
+
+    .content { padding: 64px 24px; }
+
+    .eyebrow {
+      margin: 0 0 20px;
+      color: #77796d;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(64px, 13vw, 112px);
+      line-height: 1.08;
+      letter-spacing: -.08em;
+      font-weight: 800;
+    }
+
+    .message {
+      margin: 24px 0 0;
+      color: #68695f;
+      font-size: clamp(15px, 2.5vw, 18px);
+      letter-spacing: -.02em;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 9px;
+      border-radius: 50%;
+      background: #8b9d78;
+      vertical-align: 2px;
+    }
+
+    @media (max-width: 520px) {
+      main { min-height: 380px; border-radius: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="content" aria-labelledby="greeting">
+      <p class="eyebrow">A little hello</p>
+      <h1 id="greeting">안녕하세요</h1>
+      <p class="message"><span class="dot" aria-hidden="true"></span>오늘도 반가워요.</p>
+    </section>
+  </main>
+</body>
+</html>
